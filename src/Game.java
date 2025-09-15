@@ -8,11 +8,21 @@ public class Game {
         this.p2 = p2;
     }
     public void play() {
+        System.out.println();
+        System.out.println("Starting game between: ");
+        System.out.println("-" + p1);
+        System.out.println("-" + p2);
+        System.out.println();
+
         Player current = p1;
+
         while (true) {
             board.print();
+            System.out.println("Turn:" + current);
+
             int[] move = current.chooseMove(board);
             board.place(move[0], move[1], current.mark());
+
             if (board.winner() != Mark.EMPTY) {
                 board.print();
                 System.out.println("Winner: " + current.name());

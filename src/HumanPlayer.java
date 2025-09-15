@@ -25,7 +25,7 @@ public class HumanPlayer extends Player {
                 c = in.nextInt() - 1;
                 if (board.isEmpty(r, c)) return new int[]{r, c};
             } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a number 1-3 or 'exit'.");
+                System.out.println("Invalid input. Please enter valid input or enter 'exit' to leave.");
                 in.nextLine();
                 continue;
             }
